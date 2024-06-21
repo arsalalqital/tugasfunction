@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       const tebakAngka =[1,2,3]
+       let player1 ;
+       let player2 ;
+       let winner ;
+
+       //player 1 gues//
+
+        player1 = parseInt(prompt("player 1 tebak angka"));
+        if(tebakAngka.includes(player1)){
+         
+          //player 2 gues//
+
+          player2 = parseInt(prompt("player 2 tebak angka"));
+          if(tebakAngka.includes(player2) && player1 !==player2){
+
+            // Determine the winner
+
+            if(player1 === 1 && player2 === 2){
+                  winner = "player 2";
+            } 
+            else if(player1 === 2 && player2 === 3){
+              winner = "player 2"
+            }
+            else if(player1 === 3 && player2 === 1){
+              winner = "player 2"
+            }
+            else {
+            winner = "Player 1";
+            }
+            alert(`Pemenang: ${winner}`);
+          }
+          else {
+        alert("Tebakan Player 2 tidak valid atau angka sudah ditebak sebelumnya.");
+          }
+          
+          } 
+        else {
+          alert("Tebakan Player 1 tidak valid atau angka sudah ditebak sebelumnya.");
+
+          }
+
+      
+
+    </script>
+</body>
+</html>
